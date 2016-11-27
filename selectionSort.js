@@ -1,34 +1,41 @@
-/*
-void selectionSort(int[] ar){
-   for (int i = 0; i ‹ ar.length-1; i++)
-   {
-      int min = i;
-      for (int j = i+1; j ‹ ar.length; j++)
-            if (ar[j] ‹ ar[min]) min = j;
-      int temp = ar[i];
-      ar[i] = ar[min];
-      ar[min] = temp;
-} }
+/* Explanation
+  This algorithm is an in-place non-recursive operation.
+  The operation uses nested loops to traverse the dataset several times.
+  The algorithm gets its name from the way higher values are selected and pushed
+    right, up the dataset but exchanging the lower values before after it.
+
+  1) Outer Loop: Loops through all but the last values in the dataset.
+  2) Preserve the index of current position
+  3) Inner Loop: Traverse the array from the next index to the end of the dataset.
+    3a) If the value of the inner Index is less than that of the Preserved index,
+      Reset the Preservec index to the inner Index
+    3b) If the Presevered index has not changed, replace it with the value of the
+      Current index.
 */
 
 function selectionSort (arrData) {
   'use strict'
-  let arrSortedData = [...arrData]
   let indexA
   let indexB
   let indexC
-  let swap
+  let dataMax = arrData.length
 
-  for (indexA = 0; indexA < arrSortedData.length - 1; indexA++) {
+  function _swap (arrData, numSrc, numTgt) {
+    let swap = arrData[numSrc]
+    arrData[numSrc] = arrData[numTgt]
+    arrData[numTgt] = swap
+  }
+
+  for (indexA = 0; indexA < dataMax - 1; indexA++) {
     indexB = indexA
-    for (indexC = indexA + 1; indexC < arrSortedData.length; indexC++) {
-      if (arrSortedData[indexC] < arrSortedData[indexB]) {
+    for (indexC = indexA + 1; indexC < dataMax; indexC++) {
+      if (arrData[indexC] < arrData[indexB]) {
         indexB = indexC
       }
-      swap = arrSortedData[indexA]
-      arrSortedData[indexA] = arrSortedData[indexB]
-      arrSortedData[indexB] = swap
+      if (indexA !== indexB) {
+        _swap(arrData, indexA, indexB)
+      }
     }
   }
-  return arrSortedData
+  return arrData
 }

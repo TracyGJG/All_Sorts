@@ -1,44 +1,24 @@
-/*
-procedure mergesort( var a as array )
-   if ( n == 1 ) return a
-   var l1 as array = a[0] ... a[n/2]
-   var l2 as array = a[n/2+1] ... a[n]
-   l1 = mergesort( l1 )
-   l2 = mergesort( l2 )
-   return merge( l1, l2 )
-end procedure
-*/
+/* Explanation
+  This algorithm is a recursive operation that uses a divide-and-conquer approach.
 
-/*
-procedure merge( var a as array, var b as array )
-   var c as array
-   while ( a and b have elements )
-      if ( a[0] > b[0] )
-         add b[0] to the end of c
-         remove b[0] from b
-      else
-         add a[0] to the end of c
-         remove a[0] from a
-      end if
-   end while
-   while ( a has elements )
-      add a[0] to the end of c
-      remove a[0] from a
-   end while
-   while ( b has elements )
-      add b[0] to the end of c
-      remove b[0] from b
-   end while
-   return c
-end procedure
+  Mergining involves combining two stacks into a single stack using a rule.
+  In this sort the rule is, lowest value first, until one stack is exhausted.
+    Then the remaining stack in appended to the end. This algorithm assuems each
+    stack is sorted, which is acheived by performing the process on sub-divided stacks.
+
+  1) Split the dataset in two, whilst there is more than one element in the dataset.
+  2) Perform the mergeSort operation on each half and then merge the results.
+  3) Merge lists A and B:
+    3a) With a maximum of 2 unsorted values, sort them in value order.
+    3b) With more than 2 (sorted) values, combine them in sorted sequence.
 */
 
 function mergeSort (arrData) {
   'use strict'
-  let arrSortedData = [...arrData]
   let indexA
   let indexB
   let indexC
+  let dataMax = arrData.length
 
   function merge (arrA, arrB) {
     let arrC = []
@@ -52,14 +32,13 @@ function mergeSort (arrData) {
     return arrC.concat(arrA).concat(arrB)
   }
 
-  if (arrSortedData.length > 1) {
+  if (dataMax > 1) {
     // Split the source array in two
-    indexA = Math.floor(arrSortedData.length / 2)
-    indexB = arrSortedData.slice(0, indexA)
-    indexC = arrSortedData.slice(indexA)
-    // Process each half and merge them
+    indexA = Math.floor(dataMax / 2)
+    indexB = arrData.slice(0, indexA)
+    indexC = arrData.slice(indexA)
     return merge(mergeSort(indexB), mergeSort(indexC))
   } else {
-    return arrSortedData
+    return arrData
   }
 }

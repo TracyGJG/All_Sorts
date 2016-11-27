@@ -1,34 +1,32 @@
-/*
-void insertionSort(int[] ar)
-{
-   for (int i=1; i ‹ ar.length; i++)
-   {
-      int index = ar[i]; int j = i;
-      while (j > 0 && ar[j-1] > index)
-      {
-           ar[j] = ar[j-1];
-           j--;
-      }
-      ar[j] = index;
-} }
+/* Explanation
+  This algorithm is an in-place non-recursive operation.
+  The operation uses nested loops to traverse the dataset several times.
+  The algorithm gets its name from the way values larger than the current value
+    are shuffled right to the smaller value can be inserted in the gap formed.
+
+  1) Outer Loop: Loops through all values in the dataset.
+  2) Preserve the current value and the index of its position in the array
+  3) Inner Loop: Traverse back through the array from the current index,
+    until back at the begining or a value less than the preserved value is found.
+    3a) At each cycle of the inner loop shuffle the value up the array by assigning
+      the value of the previous index to the current index.
+  4) Replace the value of the resting position with the preserved value.
 */
 
 function insertionSort (arrData) {
   'use strict'
-  let arrSortedData = [...arrData]
   let indexA
   let indexB
   let indexC
-  let swap
+  let dataMax = arrData.length
 
-  for (indexA = 1; indexA < arrSortedData.length; indexA++) {
-    indexB = arrSortedData[indexA]
+  for (indexA = 1; indexA < dataMax; indexA++) {
+    indexB = arrData[indexA]
     indexC = indexA
-    while (indexC > 0 && arrSortedData[indexC - 1] > indexB) {
-      arrSortedData[indexC] = arrSortedData[indexC - 1]
-      indexC--
+    while (indexC > 0 && arrData[indexC - 1] > indexB) {
+      arrData[indexC] = arrData[--indexC]
     }
-    arrSortedData[indexC] = indexB
+    arrData[indexC] = indexB
   }
-  return arrSortedData
+  return arrData
 }
