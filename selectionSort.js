@@ -22,6 +22,7 @@ function selectionSort (arrData) {
   }
 
   const dataMax = arrData.length
+  console.log('Initial:', arrData.join(), `[Count:${dataMax}]`)
   for (let indexA = 0; indexA < dataMax - 1; indexA++) {
     console.log(arrData.join())
     let indexB = indexA
@@ -31,7 +32,8 @@ function selectionSort (arrData) {
       }
     }
     if (indexA !== indexB) _swap(arrData, indexA, indexB)
+    console.log('Cycle:', arrData.join())
   }
-  console.log(arrData.join())
+  console.log('Final:', arrData.join())
   return arrData
 }

@@ -29,13 +29,16 @@ function mergeSort (arrData) {
     return arrC.concat(arrA).concat(arrB)
   }
 
+  console.log('Initial:', arrData.join(), `[Count:${dataMax}]`)
   if (dataMax > 1) {
     // Split the source array in two
     let indexA = Math.floor(dataMax / 2)
     let indexB = arrData.slice(0, indexA)
     let indexC = arrData.slice(indexA)
+    console.log('Final:', arrData.join())
     return merge(mergeSort(indexB), mergeSort(indexC))
   } else {
+    console.log('Cycle:', arrData.join())
     return arrData
   }
 }

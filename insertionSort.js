@@ -16,6 +16,7 @@
 function insertionSort (arrData) {
   'use strict'
   let dataMax = arrData.length
+  console.log('Initial:', arrData.join(), `[Count:${dataMax}]`)
   for (let indexA = 1; indexA < dataMax; indexA++) {
     console.log(arrData.join())
     const indexB = arrData[indexA]
@@ -24,7 +25,8 @@ function insertionSort (arrData) {
       arrData[indexC] = arrData[--indexC]
     }
     arrData[indexC] = indexB
+    console.log('Cycle:', arrData.join())
   }
-  console.log(arrData.join())
+  console.log('Final:', arrData.join())
   return arrData
 }

@@ -80,7 +80,12 @@ function heapSort (arrData) {
     } while (numBalanced) // We can stop when we encounter NO_CHANGE
   }
 
+  console.log('Initial:', arrData.join(), `[Count:${numTail}]`)
   fnBalanceHeap() // Perform an inital balancing of the array using the heap
-  while (numTail) fnRemoveHead()  // Poor name - Add highest value (head) to tail
+  while (numTail) {
+    fnRemoveHead()  // Poor name - Add highest value (head) to tail
+    console.log('Cycle:', arrData.join())
+  }
+  console.log('Final:', arrData.join())
   return arrData
 }

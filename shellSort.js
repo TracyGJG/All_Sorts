@@ -22,6 +22,7 @@ function shellSort (arrData) {
   const dataMax = arrData.length
 
 // 1 4 13 40 (equals 120/3)
+  console.log('Initial:', arrData.join(), `[Count:${dataMax}]`)
   while (indexA < (dataMax / 3)) {
     indexA = indexA * 3 + 1
   }
@@ -36,8 +37,10 @@ function shellSort (arrData) {
         indexE = indexD - indexA
       }
       arrData[indexD] = indexC
+      console.log('Cycle:', arrData.join())
     }
     indexA = (indexA - 1) / 3
   }
+  console.log('Final:', arrData.join())
   return arrData
 }

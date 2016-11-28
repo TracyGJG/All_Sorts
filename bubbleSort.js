@@ -20,6 +20,7 @@ function bubbleSort (arrData) {
   }
 
   let indexA = arrData.length
+  console.log('Initial:', arrData.join(), `[Count:${indexA}]`)
   do {
     let indexB = 0
     for (let indexC = 0; indexC < indexA; indexC++) {
@@ -29,6 +30,8 @@ function bubbleSort (arrData) {
       }
     }
     indexA = indexB
+    console.log('Cycle:', arrData.join())
   } while (indexA > 0)
+  console.log('Final:', arrData.join())
   return arrData
 }

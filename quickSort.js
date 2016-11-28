@@ -42,9 +42,12 @@ function quickSort (arrData) {
       const pIndex = _partition(arrData, numStart, numEnd)
       _quickSort(arrData, numStart, pIndex - 1)
       _quickSort(arrData, pIndex + 1, numEnd)
+      console.log('Cycle:', arrData.join())
     }
   }
 
+  console.log('Initial:', arrData.join(), `[Count:${arrData.length}]`)
   _quickSort(arrData, 0, arrData.length - 1)
+  console.log('Final:', arrData.join())
   return arrData
 }
