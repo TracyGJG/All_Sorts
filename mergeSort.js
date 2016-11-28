@@ -15,10 +15,7 @@
 
 function mergeSort (arrData) {
   'use strict'
-  let indexA
-  let indexB
-  let indexC
-  let dataMax = arrData.length
+  const dataMax = arrData.length
 
   function merge (arrA, arrB) {
     let arrC = []
@@ -34,9 +31,9 @@ function mergeSort (arrData) {
 
   if (dataMax > 1) {
     // Split the source array in two
-    indexA = Math.floor(dataMax / 2)
-    indexB = arrData.slice(0, indexA)
-    indexC = arrData.slice(indexA)
+    let indexA = Math.floor(dataMax / 2)
+    let indexB = arrData.slice(0, indexA)
+    let indexC = arrData.slice(indexA)
     return merge(mergeSort(indexB), mergeSort(indexC))
   } else {
     return arrData

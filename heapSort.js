@@ -20,7 +20,7 @@
   2) Move the Head (top parent value) out of the Heap to prepend a list of sorted values.
   3) Re-balance the Heap by placing the last value in the Heap at the Head and
     re-balance each Triad, following the path of the exchanged child until either,
-    there are no more children or no exchange is required. 
+    there are no more children or no exchange is required.
 */
 
 function heapSort (arrData) {

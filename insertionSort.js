@@ -15,18 +15,16 @@
 
 function insertionSort (arrData) {
   'use strict'
-  let indexA
-  let indexB
-  let indexC
   let dataMax = arrData.length
-
-  for (indexA = 1; indexA < dataMax; indexA++) {
-    indexB = arrData[indexA]
-    indexC = indexA
+  for (let indexA = 1; indexA < dataMax; indexA++) {
+    console.log(arrData.join())
+    const indexB = arrData[indexA]
+    let indexC = indexA
     while (indexC > 0 && arrData[indexC - 1] > indexB) {
       arrData[indexC] = arrData[--indexC]
     }
     arrData[indexC] = indexB
   }
+  console.log(arrData.join())
   return arrData
 }

@@ -13,19 +13,16 @@
 
 function bubbleSort (arrData) {
   'use strict'
-  let indexA = arrData.length
-  let indexB // Non-swap detection
-  let indexC // Swap/Comparison location
-
   function _swap (arrData, numSrc, numTgt) {
     let swap = arrData[numSrc]
     arrData[numSrc] = arrData[numTgt]
     arrData[numTgt] = swap
   }
 
+  let indexA = arrData.length
   do {
-    indexB = 0
-    for (indexC = 0; indexC < indexA; indexC++) {
+    let indexB = 0
+    for (let indexC = 0; indexC < indexA; indexC++) {
       if (arrData[indexC] > arrData[indexC + 1]) {
         _swap(arrData, indexC, indexC + 1)
         indexB = indexC

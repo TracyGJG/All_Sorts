@@ -19,21 +19,17 @@
 function shellSort (arrData) {
   'use strict'
   let indexA = 1
-  let indexB
-  let indexC
-  let indexD
-  let indexE
-  let dataMax = arrData.length
+  const dataMax = arrData.length
 
 // 1 4 13 40 (equals 120/3)
   while (indexA < (dataMax / 3)) {
     indexA = indexA * 3 + 1
   }
   while (indexA > 0) {
-    for (indexB = indexA; indexB < dataMax; indexB++) {
-      indexC = arrData[indexB]
-      indexD = indexB
-      indexE = indexD - indexA
+    for (let indexB = indexA; indexB < dataMax; indexB++) {
+      let indexC = arrData[indexB]
+      let indexD = indexB
+      let indexE = indexD - indexA
       while (indexD > indexA - 1 && arrData[indexE] >= indexC) {
         arrData[indexD] = arrData[indexE]
         indexD = indexE
