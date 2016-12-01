@@ -1,13 +1,26 @@
 # All_Sorts
 Collection of Sort Algorithms implemented in JavaScript
 ---
-##Simple Sorts
+##Exchange (Swap) Sorts
 * Bubble
-* Insertion
-* Selection
-* Shell
-
-##Efficient Sorts
-* Heap
-* Merge
+* Cocktail (shaker)
+* Comb
 * Quick
+
+##Selection Sorts
+* Cycle
+* Heap
+* Selection
+
+##Insertion Sorts
+* Insertion
+* Shell
+* Tree
+
+##Merge Sorts
+* Merge
+
+##Concurrent Sorts
+* Bitonic
+  - Base Two
+  - Base N

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Comb Sort</title>
+  <style>
+    label, textarea {
+      margin-bottom: 1em;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Comb Sort</h1>
+  <label for="start">Start:</label><input type="text" id="start" readonly='readonly'>
+  <br/>
+  <textarea id="results" cols="80" rows="20"></textarea>
+  <br/>
+  <label for="end">End:</label><input type="text" id="end" readonly='readonly'>
+
+  <script src='combSort.js'></script>
+  <script>
+    const arrRandData = [
+      61,20,56,25,73,2,57,27,73,95,1,34,4,99,75,59,96,54,59,10,
+      69,74,93,94,89,94,11,25,29,71,37,80,75,39,83,68,90,94,63,32,
+      16,85,15,42,97,60,34,11,69,64,50,74,40,93,91,40,0,39,16,59,
+      69,71,26,53,39,60,69,77,95,53,99,16,72,17,83,84,70,69,21,48,
+      37,31,25,51,71,41,49,82,24,93,57,85,40,24,90,56,30,16,64,17,
+      23,24,46,3,27,4,94,76,74,60,34,5,16,0,32,84,4,64,61,15]
+    document.querySelector('#start').value = Date.now()
+    document.querySelector('#results').value = combSort(arrRandData).join()
+    document.querySelector('#end').value = Date.now()
+  </script>
+</body>
+</html>
