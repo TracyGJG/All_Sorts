@@ -24,3 +24,6 @@ Collection of Sort Algorithms implemented in JavaScript
 * Bitonic
   - Base Two
   - Base N
+
+---
+This project inspired me to try and develop [my own sort algorithm](https://github.com/TracyGJG/My-Sorts/blob/master/README.md).
