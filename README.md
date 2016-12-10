@@ -1,5 +1,5 @@
 # All_Sorts
-Collection of Sort Algorithms implemented in JavaScript
+Collection of well documented Sort Algorithms implemented in JavaScript
 ---
 ##Exchange (Swap) Sorts
 * Bubble
