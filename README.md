@@ -20,6 +20,9 @@ Collection of well documented Sort Algorithms implemented in JavaScript
 ##Merge Sorts
 * Merge
 
+##Distribution Sorts
+* Radix
+
 ##Concurrent Sorts
 * Bitonic
   - Base Two
