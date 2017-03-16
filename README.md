@@ -1,29 +1,29 @@
 # All_Sorts
 Collection of well documented Sort Algorithms implemented in JavaScript
 ---
-##Exchange (Swap) Sorts
+## Exchange (Swap) Sorts
 * Bubble
 * Cocktail (shaker)
 * Comb
 * Quick
 
-##Selection Sorts
+## Selection Sorts
 * Cycle
 * Heap
 * Selection
 
-##Insertion Sorts
+## Insertion Sorts
 * Insertion
 * Shell
 * Tree
 
-##Merge Sorts
+## Merge Sorts
 * Merge
 
-##Distribution Sorts
+## Distribution Sorts
 * Radix
 
-##Concurrent Sorts
+## Concurrent Sorts
 * Bitonic
   - Base Two
   - Base N
