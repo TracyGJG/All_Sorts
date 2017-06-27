@@ -23,6 +23,7 @@ Collection of well documented Sort Algorithms implemented in JavaScript
 * Merge
 
 ## Distribution Sorts
+* Counting
 * Radix
 
 ## Concurrent Sorts
