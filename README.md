@@ -21,9 +21,12 @@ Collection of well documented Sort Algorithms implemented in JavaScript
 
 ## Merge Sorts
 * Merge
+* [Tim](https://en.wikipedia.org/wiki/Timsort) - in development
 
 ## Distribution Sorts
+* [Bucket](https://en.wikipedia.org/wiki/Bucket_sort) - in development
 * Counting
+* [Pigeonhole](https://en.wikipedia.org/wiki/Pigeonhole_sort) - in development
 * Radix
 
 ## Concurrent Sorts
