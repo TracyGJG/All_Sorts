@@ -17,6 +17,7 @@ Collection of well documented Sort Algorithms implemented in JavaScript
 ## Insertion Sorts
 * Insertion
 * Shell
+* Strand - in development
 * Tree
 
 ## Merge Sorts
