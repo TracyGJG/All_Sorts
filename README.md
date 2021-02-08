@@ -17,17 +17,17 @@ Collection of well documented Sort Algorithms implemented in JavaScript
 ## Insertion Sorts
 * Insertion
 * Shell
-* Strand - in development
+* [Strand](https://en.wikipedia.org/wiki/Strand_sort) - pending development
 * Tree
 
 ## Merge Sorts
 * Merge
-* [Tim](https://en.wikipedia.org/wiki/Timsort) - in development
+* [Tim](https://en.wikipedia.org/wiki/Timsort) - pending development
 
 ## Distribution Sorts
-* [Bucket](https://en.wikipedia.org/wiki/Bucket_sort) - in development
+* [Bucket](https://en.wikipedia.org/wiki/Bucket_sort) - pending development
 * Counting
-* [Pigeonhole](https://en.wikipedia.org/wiki/Pigeonhole_sort) - in development
+* [Pigeonhole](https://en.wikipedia.org/wiki/Pigeonhole_sort) - pending development
 * Radix
 
 ## Concurrent Sorts
